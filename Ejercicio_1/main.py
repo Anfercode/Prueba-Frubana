@@ -38,13 +38,13 @@ Para cada a x o r x, x siempre será un entero con signo (que se ajustará en 32
 Sample Input:
 
 7
-r 1
-a 1
-a 2
-a 1
-r 1
-r 2
-r 1
+r1
+a1
+a2
+a1
+r1
+r2
+r1
 
 Sample Output:
 
@@ -65,5 +65,42 @@ Sabado 17 Agosto - ????
 
 '''
 
+from Median import Median
+
 if __name__ == "__main__":
-    pass
+
+    MAX_OPERACIONES = 10**5  # Numero de operaciones permitidas por el usuario
+
+    try:
+        # Se pide el numero de operaciones al usuario
+        number_of_operations = int(
+            input('Ingrese el numero de operaciones que desea realizar: '))
+
+        if number_of_operations >= 0:
+            if number_of_operations <= MAX_OPERACIONES:
+
+                # instanciacion de la clase Median
+                median = Median()
+
+                for _ in range(number_of_operations):
+
+                    operation_with_number = input(
+                        'ingrese la operacion y el numero ejemplo: r1 > ')
+
+                    ''' 
+                    El bloque if not median.validate_operation(operation_with_number):
+                    tiene la finalidad de llamar recursivamente la funcion en caso
+                    de que la operacion no se encuentre entre las validas
+                    '''
+
+                    if not median.validate_operation(operation_with_number):
+                        operation_with_number = input(
+                            'Ingrese una operacion valida > ')
+                        median.validate_operation(operation_with_number)
+            else:
+                print('el numero de operaciones es mayor de lo permitido')
+        else:
+            print('el numero de operaciones es menor o igual a 0')
+
+    except ValueError:
+        print('Inserte un valor numerico')
