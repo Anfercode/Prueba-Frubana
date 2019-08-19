@@ -8,7 +8,11 @@ Este repo tiene la finalidad de realizar la solución de la prueba técnica de f
 
 ## Problema 1.
 
+<<<<<<< HEAD
 ****
+=======
+** **
+>>>>>>> 25c28cdb912aef356a21077bdaddc3415e4a7e49
 
 La mediana de los números M se define como el número del medio después de ordenarlos en orden si M es
 Impar. O es el promedio de los dos números del medio si M es par. Empiezas con un vacío
@@ -45,6 +49,7 @@ necesita imprimir la mediana y la lista está vacía, imprima Wrong
 
 Para cada a x o r x, x siempre será un entero con signo (que se ajustará en 32 bits).
 
+<<<<<<< HEAD
 **Sample Input:**
 
 7
@@ -61,6 +66,17 @@ r1
 
 r2
 
+=======
+Sample Input:
+
+7
+r1
+a1
+a2
+a1
+r1
+r2
+>>>>>>> 25c28cdb912aef356a21077bdaddc3415e4a7e49
 r1
 
 **Sample Output:**
@@ -84,7 +100,11 @@ la lista se convierte vacío, tienes que imprimir Wrong!
 
 ## Problema 2.
 
+<<<<<<< HEAD
 ****
+=======
+** **
+>>>>>>> 25c28cdb912aef356a21077bdaddc3415e4a7e49
 
 Se le da un árbol sin raíz de n nodos numerados del 1 al n. cada nodo tiene un color C sub i sea d(i,j) el número de colores diferentes en la ruta entre el nodo i y el nodo j. por
 cada nodo i , calcular el valor de la sumatoria de d(i,j)
