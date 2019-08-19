@@ -58,11 +58,6 @@ Wrong!
 
 Nota: Como es evidente desde la última línea de la entrada, si después de la operación de eliminación
 la lista se convierte vacío, tienes que imprimir Wrong!
-
-Tiempo en resolver:
-
-Sabado 17 Agosto - ????
-
 '''
 
 from Median import Median

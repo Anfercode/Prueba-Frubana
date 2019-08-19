@@ -5,9 +5,14 @@ class Median:
     MAX_INTEGER = 4294967295
 
     def median_calc(self):
-        ''' 
-        Metodo encargado de realizar el calculo de la media
-        '''
+        """
+        * Descripcion:
+        * Metodo encargado de realizar el calculo de la media de la variable list_of_numbers
+        * 
+        * parametros:
+        * NA
+        * 
+        """
 
         list_sorted = sorted(self.list_of_numbers)
         len_of_list = len(self.list_of_numbers)
@@ -25,16 +30,22 @@ class Median:
 
     def add_number_of_list(self, number):
         """
-        Metodo encargado de agregar elementos en la lista
-        @param number atributo del numero a agregar a la lista
+        * Descripcion:
+        * Metodo encargado de agregar elementos en la lista
+        * 
+        * parametros:
+        * @param number: Atributo del numero a agregar a list_of_numbers
         """
         self.list_of_numbers.append(number)
         self.median_calc()
 
     def remove_number_of_list(self, number):
         """
-        Metodo encargado de remover el numero de la lista
-        @param number atributo del numero a remover de la lista
+        * Descripcion:
+        * Metodo encargado de remover el numero de la lista
+        * 
+        * parametros:
+        * @param number: Atributo del numero a remover a list_of_numbers
         """
         try:
             self.list_of_numbers.remove(number)
@@ -43,10 +54,14 @@ class Median:
             print('Wrong!')
 
     def validate_operation(self, operation_with_number):
-        '''
-        Metodo encargado de validar la operacion
-        @param operation_with_number es el atributo que contendra la operacion a realiza y el numero a operar
-        '''
+        """
+        * Descripcion:
+        * Metodo encargado de validar la operacion
+        * 
+        * parametros:
+        * @param operation_with_number: Atributo que contendra la operacion a realiza 
+        *                               y el numero a operar
+        """
 
         try:
 
@@ -65,7 +80,8 @@ class Median:
                     print('La operacion no se encuentra entre las validas')
                     return False
             else:
-                print(f'El numero debe ser mayor o igual a 0 y menor a {self.MAX_INTEGER}')
+                print(
+                    f'El numero debe ser mayor o igual a 0 y menor a {self.MAX_INTEGER}')
                 return False
 
         except ValueError as error:
