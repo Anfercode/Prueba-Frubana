@@ -82,7 +82,7 @@ if __name__ == "__main__":
                     operation_with_number = input(
                         'ingrese la operacion y el numero ejemplo: r1 > ')
 
-                    ''' 
+                    '''
                     El bloque if not median.validate_operation(operation_with_number):
                     tiene la finalidad de llamar recursivamente la funcion en caso
                     de que la operacion no se encuentre entre las validas

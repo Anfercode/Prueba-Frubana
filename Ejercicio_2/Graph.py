@@ -1,5 +1,6 @@
 import collections
 
+
 class Graph:
     nodes = list()
     relations = dict()
@@ -8,7 +9,7 @@ class Graph:
         """
         * Descripcion:
         * Este es el metodo constructor de la clase Graph
-        * 
+        *
         * parametros:
         * @param number_of_nodes: El atributo que contiene el numero de nodos que va a tener el grafo
         """
@@ -19,7 +20,7 @@ class Graph:
         """
         * Descripcion:
         * metodo se encargado de asignar los colores a los nodos
-        * 
+        *
         * Parametros:
         * @param colour_of_nodes: El atributo del color del nodo
         """
@@ -31,7 +32,7 @@ class Graph:
         * Metodo encargado de realizar las relaciones entre los nodos
         *
         * Parametros:
-        * @param relation_of_nodes: El atributo encargado de tomar una lista con las relaciones 1 a 1 de los nodos   
+        * @param relation_of_nodes: El atributo encargado de tomar una lista con las relaciones 1 a 1 de los nodos
         """
         node_one, node_two = [int(i) - 1 for i in relation_of_nodes]
         if node_one < (self.number_of_nodes) and node_two < (self.number_of_nodes):
@@ -57,7 +58,8 @@ class Graph:
         result = 0
 
         processed = {number_of_node}
-        deque_nodes = collections.deque([(number_of_node, {self.nodes[number_of_node]})])
+        deque_nodes = collections.deque(
+            [(number_of_node, {self.nodes[number_of_node]})])
 
         while deque_nodes:
             node, node_relation = deque_nodes.popleft()
@@ -65,7 +67,7 @@ class Graph:
             result += len(node_relation)
 
             for i in self.relations[node]:
-                if i not in processed:                    
+                if i not in processed:
                     processed.add(i)
                     deque_nodes.append((i, node_relation | {self.nodes[i]}))
 

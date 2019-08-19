@@ -8,10 +8,10 @@ class Median:
         """
         * Descripcion:
         * Metodo encargado de realizar el calculo de la media de la variable list_of_numbers
-        * 
+        *
         * parametros:
         * NA
-        * 
+        *
         """
 
         list_sorted = sorted(self.list_of_numbers)
@@ -32,7 +32,7 @@ class Median:
         """
         * Descripcion:
         * Metodo encargado de agregar elementos en la lista
-        * 
+        *
         * parametros:
         * @param number: Atributo del numero a agregar a list_of_numbers
         """
@@ -43,7 +43,7 @@ class Median:
         """
         * Descripcion:
         * Metodo encargado de remover el numero de la lista
-        * 
+        *
         * parametros:
         * @param number: Atributo del numero a remover a list_of_numbers
         """
@@ -57,7 +57,7 @@ class Median:
         """
         * Descripcion:
         * Metodo encargado de validar la operacion
-        * 
+        *
         * parametros:
         * @param operation_with_number: Atributo que contendra la operacion a realiza 
         *                               y el numero a operar
