@@ -1,6 +1,5 @@
 import collections
 
-
 class Graph:
     nodes = list()
     relations = dict()
@@ -39,24 +38,35 @@ class Graph:
             self.relations[node_one].append(node_two)
             self.relations[node_two].append(node_one)
         else:
-            print('La relacion no se pudo realizar porque alguno de los nodos relacionados no existe en el grafo')
+            print(
+                'La relacion no se pudo realizar porque alguno de los nodos relacionados no existe en el grafo')
             correction = input('=> ').split()
             self.define_relation(correction)
 
     def graph_sum(self, number_of_node):
-        value = 0
-        
+        """
+        * Descripcion:
+        * Metodo encargado de realizar la suma cuando los colores de los nodos son diferentes
+        *
+        * Parametros:
+        * @param number_of_node: Atributo del numero del nodo del grafo
+        *
+        * Return: Retorna la suma de los colores de los nodos cumpliendo con la logica del color diferente
+        """
+
+        result = 0
+
         processed = {number_of_node}
         deque_nodes = collections.deque([(number_of_node, {self.nodes[number_of_node]})])
-        
+
         while deque_nodes:
-            t, colors = deque_nodes.popleft()
+            node, node_relation = deque_nodes.popleft()
 
-            value += len(colors)
+            result += len(node_relation)
 
-            for i in self.relations[t]:
-                import pdb; pdb.set_trace()
-                if self.relations not in processed:
-                    processed.add(self.relations)
-                    deque_nodes.append((self.relations, colors | {self.nodes[relations]}))
-        return value
+            for i in self.relations[node]:
+                if i not in processed:                    
+                    processed.add(i)
+                    deque_nodes.append((i, node_relation | {self.nodes[i]}))
+
+        return result

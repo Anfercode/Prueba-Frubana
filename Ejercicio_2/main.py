@@ -70,8 +70,10 @@ ejemplo: 1 2 3 4 5
                         else:
                             print('Ingrese la relacion como corresponde')
                 
+                print('/*********Resultados**********/')
+
                 for i in range(number_of_nodes):
-                    graph.graph_sum(i)
+                    print('=>',graph.graph_sum(i))
             else:
                 print('El numero de colores ingresados es mayor o menor que el numero de nodos')
         else:
