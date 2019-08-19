@@ -140,7 +140,7 @@ Los patrones que conozco son el singleton, el factory y el command, pero el que 
 
 # Estadisticas 📈
 
-En esta seccion encontraras el tiempo invertido en horas para realizar la prueba y el tiempo por archivo, [click aqui va ver con detalle](https://wakatime.com/@Anfercode/projects/xtwfglflac?start=2019-08-13&end=2019-08-19), la herramienta utilizada para estas metricas se llama [Wakatime](https://wakatime.com).
+En esta seccion encontraras el tiempo invertido en horas para realizar la prueba y el tiempo por archivo, [click aqui para ver con detalle](https://wakatime.com/@Anfercode/projects/xtwfglflac?start=2019-08-13&end=2019-08-19), la herramienta utilizada para estas metricas se llama [Wakatime](https://wakatime.com).
 ****
 
 Hecho con ❤️ por Andres Campero 😃
